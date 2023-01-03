@@ -12,10 +12,8 @@ public class eCommerceSpringApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(eCommerceSpringApplication.class, args);
+		
 	}
-
-//	@Bean
-//	SellerService getService() {
-//		return new SellerServicesImpl();
-//	}
+	
+	
 }
