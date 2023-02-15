@@ -24,6 +24,9 @@ An E-commerce REST API built over a span of 1 week. The API can perform all the 
 * Feedback Module
 * Seller Module
 
+## ER diagram
+<img width="872" alt="Screenshot 2023-02-15 at 10 41 19 AM" src="https://user-images.githubusercontent.com/96117548/218993161-18d71291-b81e-44d7-9c1a-70f107332765.png">
+
 
 ## Features
 
