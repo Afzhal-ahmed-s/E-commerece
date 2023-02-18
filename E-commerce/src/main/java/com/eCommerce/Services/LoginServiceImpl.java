@@ -35,14 +35,14 @@ public class LoginServiceImpl implements LoginServices {
 	private AdminRepo arepo;
 
 	@Override
-	public CurrentUserSession customerlogin(Login log) throws LoginException {
+	public CurrentUserSession customerLogin(Login log) throws LoginException {
+		System.out.println("check");
 
 		Customer customer = crepo.findByEmail(log.getEmail());
 
 		if (customer == null) {
 			throw new LoginException("No Customer Found With this Email");
 		}
-
 		Optional<CurrentUserSession> opt = cusr.findById(customer.getCustomerId());
 
 		if (opt.isPresent())

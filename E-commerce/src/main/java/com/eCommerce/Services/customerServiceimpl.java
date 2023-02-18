@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.eCommerce.exceptions.CustomerException;
 import com.eCommerce.exceptions.LoginException;
 import com.eCommerce.model.Address;
+import com.eCommerce.model.AddressDTO;
 import com.eCommerce.model.Cart;
 import com.eCommerce.model.CurrentUserSession;
 import com.eCommerce.model.Customer;
@@ -93,7 +94,7 @@ public class customerServiceimpl implements customerService{
 	}
 
 	@Override
-	public Address AddAddress(Address address, String key, Integer customerId)
+	public Address AddAddress(AddressDTO address, String key, Integer customerId)
 			throws CustomerException, LoginException {
 		
 		  CurrentUserSession cus= cusr.findByUuid(key);
@@ -106,9 +107,14 @@ public class customerServiceimpl implements customerService{
 			 
 			 Customer cust= opt.get();
 			 
-			 cust.setAddress(address);
+			 Address add = new Address(address.getStreetNo(), address.getBuildingName(),
+					 address.getCity(), address.getState(),
+					 address.getCountry(), address.getPincode());
+			 
+			 Address addr= arepo.save(add);
+			 cust.setAddress(addr);
 			 			 
-			 Address addr= arepo.save(address);
+			 crepo.save(cust);
 			 
 			 return addr;
 			 

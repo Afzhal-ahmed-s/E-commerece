@@ -34,7 +34,7 @@ public class LoginController {
 	@PostMapping("/customerLogin")
 	public ResponseEntity<CurrentUserSession> customerLoginHandler(@Valid @RequestBody Login login) throws LoginException{
 		
-		CurrentUserSession cus= lservices.customerlogin(login);
+		CurrentUserSession cus= lservices.customerLogin(login);
 		
 		return new ResponseEntity<CurrentUserSession>(cus,HttpStatus.ACCEPTED);
 		

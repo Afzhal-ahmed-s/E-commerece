@@ -1,6 +1,7 @@
 package com.eCommerce.Services;
 
 import java.util.List;
+import java.util.Map;
 
 import com.eCommerce.exceptions.CartException;
 import com.eCommerce.exceptions.CustomerException;
@@ -23,7 +24,7 @@ public interface CartServices {
 	public Cart emptycart(String key,Integer customerId)
 			throws LoginException,CustomerException,CartException;
 	
-	public List<Products> getAllProductInCart(Integer customerId,String key)
+	public Map<String, Integer> getAllProductInCart(Integer customerId,String key)
 			throws LoginException,CustomerException,CartException;
 	
 	public Integer getCartValue(Integer customerId,String key)

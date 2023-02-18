@@ -16,6 +16,7 @@ import com.eCommerce.Services.customerService;
 import com.eCommerce.exceptions.CustomerException;
 import com.eCommerce.exceptions.LoginException;
 import com.eCommerce.model.Address;
+import com.eCommerce.model.AddressDTO;
 import com.eCommerce.model.Customer;
 
 @RestController
@@ -43,7 +44,7 @@ public class CustomerController {
 	}
 	
 	@PutMapping("/AddAddress")
-	public ResponseEntity<Address> addAddressHandler(@RequestBody Address address,String key,Integer customerId) throws CustomerException, LoginException{
+	public ResponseEntity<Address> addAddressHandler(@RequestBody AddressDTO address,String key,Integer customerId) throws CustomerException, LoginException{
 		
 		Address addr= cService.AddAddress(address, key, customerId);
 		

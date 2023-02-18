@@ -6,7 +6,7 @@ import com.eCommerce.model.Login;
 
 public interface LoginServices {
 
-	public CurrentUserSession customerlogin(Login log) throws LoginException;
+	public CurrentUserSession customerLogin(Login log) throws LoginException;
 	
 	public CurrentUserSession sellerlogin(Login log) throws LoginException;
 

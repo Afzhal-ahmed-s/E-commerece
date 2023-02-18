@@ -138,17 +138,17 @@ public class CartServiceImpl implements CartServices {
 	}
 
 	@Override
-	public List<Products> getAllProductInCart(Integer customerId, String key) throws LoginException, CustomerException, CartException {
+	public Map<String, Integer> getAllProductInCart(Integer customerId, String key) throws LoginException, CustomerException, CartException {
 		Customer customer = checkLogin(key, customerId);
 		
-		List<Products> productList=new ArrayList<>();
-		
+		//List<Products> productList=new ArrayList<>();
+		Map<String, Integer>productList = new HashMap<>();
 		Cart cart= customer.getCart();
 		Map<Products, Integer> cartMap= cart.getProducts();
 		if(cartMap.size()==0) throw new CartException("No product Found In cart....");
 		
 		for(Map.Entry<Products, Integer> map:cartMap.entrySet()) {
-			productList.add(map.getKey());
+			productList.put(map.getKey().getProductName(), map.getValue());
 		}
 		
 		return productList;

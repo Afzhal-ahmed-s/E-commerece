@@ -64,7 +64,7 @@ public class PaymentServicesImpl implements paymentServices{
 		Payment payment=new Payment();
 		payment.setPaymentAmount((int)order.getOrderAmount());
 		payment.setPaymentStatus(true);
-		payment.setLocalDate(LocalDate.now());
+		payment.setDateOfPayment(LocalDate.now());
 		payment.setOrder(order);
 		payment.setCard(card);
 		
@@ -121,7 +121,7 @@ public class PaymentServicesImpl implements paymentServices{
 		if(payment.getOrder().getCustomer().getCustomerId()!=customer.getCustomerId())
 			throw new PaymentException("Invalid Payment Id for Customer");
 		
-		if(payment.getLocalDate().getDayOfYear()-LocalDate.now().getDayOfYear()>5) {
+		if(payment.getDateOfPayment().getDayOfYear()-LocalDate.now().getDayOfYear()>5) {
 			throw new PaymentException("Since It's been 5 days You cannot cancel payment directly"
 					+ " Please cancel the Order Directly");
 		}

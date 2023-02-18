@@ -10,7 +10,7 @@ import lombok.Data;
 @Data
 public class Login {
 
-	@Size(min = 3, max = 10, message = "UserName Should be of 3 to 10 Characters.")
+	@Size(min = 3, max = 20, message = "UserName Should be of 3 to 20 Characters.")
 	private String Email;
 	
 	@NotEmpty(message = "Password Should not be Empty")

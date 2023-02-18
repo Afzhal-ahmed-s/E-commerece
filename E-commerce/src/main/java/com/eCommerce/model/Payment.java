@@ -29,7 +29,7 @@ public class Payment {
 	
 	private Integer paymentAmount;
 	
-	private LocalDate localDate;
+	private LocalDate DateOfPayment;
 	
 	@JsonIgnore
 	@OneToOne

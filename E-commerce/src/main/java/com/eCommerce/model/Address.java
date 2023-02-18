@@ -24,4 +24,16 @@ public class Address {
 	private String state;
 	private String country;
 	private String pincode;
+	
+	public Address(String streetNo, String buildingName, String city, String state, String country, String pincode) {
+		super();
+		this.streetNo = streetNo;
+		this.buildingName = buildingName;
+		this.city = city;
+		this.state = state;
+		this.country = country;
+		this.pincode = pincode;
+	}
+	
+	
 }

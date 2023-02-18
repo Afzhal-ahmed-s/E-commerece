@@ -24,7 +24,7 @@ public class Products {
 	private String productName;
 	private int price;
 	private String color;
-	private String dimention;
+	private String dimension;
 	private String manufactuer;
 	private String category;
 	

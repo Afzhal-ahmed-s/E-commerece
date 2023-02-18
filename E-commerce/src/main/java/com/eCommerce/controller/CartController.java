@@ -1,6 +1,7 @@
 package com.eCommerce.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -59,12 +60,12 @@ public class CartController {
 	}
 	
 	@GetMapping("/getAllCartProducts")
-	public ResponseEntity<List<Products>> getAllProductInCartHandler(@RequestParam String Key,@RequestParam Integer customerId) 
+	public ResponseEntity<Map<String, Integer>> getAllProductInCartHandler(@RequestParam String Key,@RequestParam Integer customerId) 
 			throws LoginException, CustomerException, CartException{
 		
-		List<Products> plist = cService.getAllProductInCart(customerId, Key);
-		
-		return new ResponseEntity<List<Products>>(plist,HttpStatus.ACCEPTED);
+		//List<Products> plist = cService.getAllProductInCart(customerId, Key);
+		Map<String, Integer> plist = cService.getAllProductInCart(customerId, Key);
+		return new ResponseEntity<Map<String, Integer>>(plist,HttpStatus.ACCEPTED);
 	}
 	
 	@GetMapping("/getCartValue")

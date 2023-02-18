@@ -64,7 +64,7 @@ public class GlobalExceptionHandler {
 		err.setLocaldateTime(LocalDateTime.now());
 		err.setMessage(ad.getMessage());
 		err.setDescription(wrq.getDescription(false));
-		
+
 		return new ResponseEntity<MyErrorDetails>(err,HttpStatus.BAD_GATEWAY);
 	}
 	
@@ -143,7 +143,8 @@ public class GlobalExceptionHandler {
 		err.setLocaldateTime(LocalDateTime.now());
 		err.setMessage(ad.getMessage());
 		err.setDescription(wrq.getDescription(false));
-		
+		System.out.println("ma");
+
 		return new ResponseEntity<MyErrorDetails>(err,HttpStatus.BAD_GATEWAY);
 	}
 	
@@ -154,7 +155,7 @@ public class GlobalExceptionHandler {
 		err.setLocaldateTime(LocalDateTime.now());
 		err.setMessage(ad.getMessage());
 		err.setDescription(wrq.getDescription(false));
-		
+		System.out.println("nhe");
 		return new ResponseEntity<MyErrorDetails>(err,HttpStatus.BAD_GATEWAY);
 	}
 	
