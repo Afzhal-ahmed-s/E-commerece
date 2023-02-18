@@ -1,5 +1,7 @@
 # REST API for Ecommerce Website.
-An E-commerce REST API built over a span of 1 week. The API can perform all the CRUD operation with customer validation at every step.
+# Dukaan
+
+'Dukaan' an E-commerce REST API built over a span of 2 weeks. The API can perform all the CRUD operation with customer validation at every step.
 
 ## Tech Stack
 
@@ -23,6 +25,9 @@ An E-commerce REST API built over a span of 1 week. The API can perform all the 
 * Cart Module
 * Feedback Module
 * Seller Module
+
+## ER diagram
+<img width="872" alt="Screenshot 2023-02-15 at 10 41 19 AM" src="https://user-images.githubusercontent.com/96117548/218993161-18d71291-b81e-44d7-9c1a-70f107332765.png">
 
 
 ## Features
@@ -50,4 +55,4 @@ An E-commerce REST API built over a span of 1 week. The API can perform all the 
 
 `https://localhost:8888/`
 
-`http://localhost:8888/swagger-ui/`
+`http://localhost:8888/swagger-ui/index.html#/`
