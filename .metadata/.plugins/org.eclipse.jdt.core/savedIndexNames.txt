@@ -7,6 +7,7 @@ INDEX VERSION 1.131+/Users/afzhalahmed/Documents/GitHub/E-commerece/.metadata/.p
 2506000448.index
 2862620024.index
 1140042925.index
+307554546.index
 3741152350.index
 1293476249.index
 1900831882.index
@@ -70,7 +71,6 @@ INDEX VERSION 1.131+/Users/afzhalahmed/Documents/GitHub/E-commerece/.metadata/.p
 3888054135.index
 2711460166.index
 1908026924.index
-2479038004.index
 1865797976.index
 4147069776.index
 253829747.index
