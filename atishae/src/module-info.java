@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author afzhalahmed
- *
- */
-module atishae {
-}
