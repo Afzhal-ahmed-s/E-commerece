@@ -3,7 +3,8 @@
 
 'Dukaan' an E-commerce REST API built over a span of 2 weeks. The API can perform all the CRUD operation with customer validation at every step.
 
-https://drive.google.com/file/d/11Z8sb-nlyctHRqT1uY2Zu4UZGhykeeA1/view?usp=sharing
+>Project demonstration link- 
+<a href="https://drive.google.com/file/d/11Z8sb-nlyctHRqT1uY2Zu4UZGhykeeA1/view?usp=sharing">click here</a>
 
 ## Tech Stack
 
